@@ -102,6 +102,7 @@ section {
 .logo-link-top:hover,
 .logo-link-top:focus {
   color: var(--accent-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-link-top {
@@ -124,11 +125,13 @@ section {
 .port-link:hover,
 .port-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-nav:hover,
 .link-nav:focus {
   color: var(--accent-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-nav {
@@ -144,12 +147,25 @@ section {
 }
 
 .link-nav.current {
+  position: relative;
   color: var(--accent-text-color);
+}
+
+.link-nav.current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--accent-text-color);
+  border-radius: 2px;
+  height: 4px;
 }
 
 .link-contact:hover,
 .link-contact:focus {
   color: var(--accent-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-contact {
@@ -266,8 +282,33 @@ margin-bottom: 30px;
   margin-top: 50px;
 }
 
-.image {
+.services {
   margin-right: 30px;
+  position: relative;
+}
+
+.image-cover p {
+  position: absolute;
+  margin: 0px;
+  bottom: 27px;
+  left: 83px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--just-white-color);
+}
+
+.image-cover::before {
+  content: '';
+  position: absolute;
+  background-color: #2F303ACC;
+  left: 0;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
 }
 
 .images-list .image:last-child {
@@ -278,6 +319,7 @@ margin-bottom: 30px;
 .logo-link:hover,
 .logo-link:focus {
   color: var(--accent-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-link {
@@ -304,6 +346,7 @@ margin-bottom: 30px;
 .address-link:hover,
 .address-link:focus {
   color: var(--just-white-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link {
   text-decoration: none;
@@ -330,6 +373,7 @@ margin-bottom: 30px;
 .accent-white:focus,
 .accent-white:hover {
   color: var(--accent-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .accent-white {
@@ -385,11 +429,13 @@ background-size: auto;
 .soc-link:hover,
 .soc-link:focus {
   background-color: var(--accent-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-link:hover .soc-icon,
 .soc-link:focus .soc-icon {
   fill: var(--just-white-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
   .link-partner {
@@ -412,6 +458,7 @@ background-size: auto;
   .link-partner:focus {
     color: var(--accent-text-color);
     border: 1px solid var(--accent-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -501,11 +548,13 @@ button {
   color: var(--just-white-color);
   background-color: var(--accent-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-order:hover {
   color: var(--just-white-color);
   background-color: var(--order-button-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-order {
@@ -559,6 +608,7 @@ button {
   color: var(--just-white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .border {
@@ -607,6 +657,7 @@ color: var(--just-white-color)
 .soc-link-footer:hover,
 .soc-link-footer:focus {
   background-color: var(--accent-text-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-icon-footer {
