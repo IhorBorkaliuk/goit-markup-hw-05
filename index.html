@@ -45,7 +45,7 @@
     <section class="background-about">
         <div class="container">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="button-order" type="button">Заказать услугу</button>
+        <button class="button-order" type="button" data-modal-open>Заказать услугу</button>
         </div>
     </section>
     <section class="section-fix">
@@ -367,5 +367,16 @@
         </div>
     </div>
 </footer>
+<!-- Модальное окно -->
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <div class="modal-thumb">
+        <button class="modal-close" data-modal-close>
+            <img src="./images/close.png" alt="закрыть модальное окно" width="30" height="30">
+        </button>
+    </div>
+    </div>
+</div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
