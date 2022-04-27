@@ -102,7 +102,6 @@ section {
 .logo-link-top:hover,
 .logo-link-top:focus {
   color: var(--accent-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-link-top {
@@ -116,22 +115,22 @@ section {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .port-link {
   position: relative;
   text-decoration: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .port-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-nav:hover,
 .link-nav:focus {
   color: var(--accent-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-nav {
@@ -144,6 +143,7 @@ section {
   color: var(--title-text-color);
   text-decoration: none;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-nav.current {
@@ -165,7 +165,6 @@ section {
 .link-contact:hover,
 .link-contact:focus {
   color: var(--accent-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-contact {
@@ -177,6 +176,7 @@ section {
   color: var(--primary-text-color);
   text-decoration: none;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .benefits {
@@ -284,10 +284,9 @@ margin-bottom: 30px;
 
 .services {
   margin-right: 30px;
-  position: relative;
 }
 
-.image-cover p {
+.services p {
   position: absolute;
   margin: 0px;
   bottom: 27px;
@@ -301,15 +300,19 @@ margin-bottom: 30px;
   color: var(--just-white-color);
 }
 
-.image-cover::before {
-  content: '';
+.image-cover {
+  position: relative;
+}
+
+.text-cover {
   position: absolute;
-  background-color: #2F303ACC;
+  background-color: #2f303acc;
   left: 0;
   bottom: 0;
   width: 370px;
   height: 70px;
 }
+
 
 .images-list .image:last-child {
   margin-right: 0px;
@@ -319,7 +322,6 @@ margin-bottom: 30px;
 .logo-link:hover,
 .logo-link:focus {
   color: var(--accent-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-link {
@@ -331,6 +333,7 @@ margin-bottom: 30px;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-text {
@@ -346,7 +349,6 @@ margin-bottom: 30px;
 .address-link:hover,
 .address-link:focus {
   color: var(--just-white-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link {
   text-decoration: none;
@@ -355,6 +357,7 @@ margin-bottom: 30px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--address-link-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-footer + .item-footer {
@@ -373,11 +376,11 @@ margin-bottom: 30px;
 .accent-white:focus,
 .accent-white:hover {
   color: var(--accent-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .accent-white {
   color: var(--just-white-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 footer {
@@ -420,22 +423,22 @@ background-size: auto;
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-icon {
   fill: var(--soc-item-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-link:hover,
 .soc-link:focus {
   background-color: var(--accent-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-link:hover .soc-icon,
 .soc-link:focus .soc-icon {
   fill: var(--just-white-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
   .link-partner {
@@ -447,19 +450,24 @@ background-size: auto;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     cursor: pointer;
-    color: var(--soc-item-color)
   }
 
   .icon-partners {
-    fill: currentColor;
+    fill: var(--soc-item-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     }
 
   .link-partner:hover,
   .link-partner:focus {
     color: var(--accent-text-color);
     border: 1px solid var(--accent-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+  .link-partner:hover .icon-partners,
+  .link-partner:focus .icon-partners {
+    fill: var(--accent-text-color);
+  }
 
 
 .partners {
@@ -573,19 +581,18 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-list:hover,
 .button-list:focus {
   color: var(--just-white-color);
   background-color: var(--accent-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-order:hover {
   color: var(--just-white-color);
   background-color: var(--order-button-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-order {
@@ -602,6 +609,7 @@ button {
   color: var(--just-white-color);
   background-color: var(--accent-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -633,13 +641,13 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   background-color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttonall:hover {
   color: var(--just-white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .border {
@@ -683,12 +691,12 @@ color: var(--just-white-color)
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-link-footer:hover,
 .soc-link-footer:focus {
   background-color: var(--accent-text-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-icon-footer {
